@@ -5,6 +5,7 @@
 # Extended Due Date : 10 / 6 / 2025 No Later than 5:15 pm - No late
 # assignments will be accepted
 
+#!/bin/bash
 set -euo pipefail
 
 
@@ -81,7 +82,7 @@ beginning of the sentence: \n\n"
 # Number 13
 printf "13. All the lines that have a word that starts with C and
 ends with 0: \n\n"
-grep '\bC[[:alnum:]]*0\b' FunScript.txt
+grep '\bC[[:alnum:]_]*0\b' FunScript.txt
 printf '\n'
 
 # Number 14
@@ -101,9 +102,9 @@ cat FunScript.txt
 echo "Prepared by Micah Thompson
 Due Date : 10 – 1 – 2025
 Extended Due Date : 10 - 6 - 2025
-Today’s Date is :
-Day :
-Month :
-Year :
-Time :
+Today’s Date is : $(date)
+Day : $(date +%A)
+Month : $(date +%B)
+Year : $(date +%Y)
+Time : $(date +%T)
 The name of the file that contains the script is : $0 \n\n"
