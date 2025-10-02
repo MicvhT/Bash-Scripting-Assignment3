@@ -81,10 +81,14 @@ beginning of the sentence: \n\n"
 # Number 13
 printf "13. All the lines that have a word that starts with C and
 ends with 0: \n\n"
+grep '\bC[[:alnum:]]*0\b' FunScript.txt
+printf '\n'
 
 # Number 14
 printf "14. All lines that contain a word that starts with s and
 end with l: \n\n"
+grep '\bs[[:alnum:]_]*\l\b'
+printf '\n'
 
 # Number 15
 printf "Deleting the existing File FunScript.txt \n\n"
@@ -92,6 +96,7 @@ rm FunScript.txt
 
 # Number 16
 printf "Display the content of FunScript.txt: \n\n"
+cat FunScript.txt
 
 echo "Prepared by Micah Thompson
 Due Date : 10 – 1 – 2025
