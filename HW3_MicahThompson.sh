@@ -103,7 +103,7 @@ rm FunScript.txt
 
 # Number 16
 printf "Display the content of FunScript.txt: \n\n"
-cat FunScript.txt && true
+cat FunScript.txt && true # Script should not fail if no match
 printf '\n'
 
 echo "Prepared by Micah Thompson
