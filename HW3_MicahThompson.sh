@@ -70,14 +70,20 @@ printf '\n'
 
 # Number 10
 printf "10. All the lines with the word zeus followed by space: \n\n"
+grep 'zeus ' FunScript.txt
+printf '\n'
 
 # Number 11
 printf "11. All the lines that the word programming appears at
 the end of the line: \n\n"
+grep 'programming$' FunScript.txt || true # Script should not fail if no match
+printf '\n'
 
 # Number 12
 printf "12. All the lines that the word Fall appears at the
 beginning of the sentence: \n\n"
+grep '^Fall' FunScript.txt
+printf '\n'
 
 # Number 13
 printf "13. All the lines that have a word that starts with C and
@@ -88,7 +94,7 @@ printf '\n'
 # Number 14
 printf "14. All lines that contain a word that starts with s and
 end with l: \n\n"
-grep '\bs[[:alnum:]_]*\l\b'
+grep '\bs[a-zA-Z0-9]*l\b' FunScript.txt
 printf '\n'
 
 # Number 15
@@ -97,7 +103,8 @@ rm FunScript.txt
 
 # Number 16
 printf "Display the content of FunScript.txt: \n\n"
-cat FunScript.txt
+cat FunScript.txt && true
+printf '\n'
 
 echo "Prepared by Micah Thompson
 Due Date : 10 – 1 – 2025
